@@ -1,0 +1,36 @@
+nav a:hover {
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  cursor: pointer;
+}
+
+#navBarBtn {
+  color: black;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  border-color: black;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+}
+
+#navBarBtn:hover {
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+
+.navBarDarkMode {
+  color: white;
+  background-color: rgba(0, 4, 46, 0.993);
+}
+
+.overviewDarkMode {
+  color: white;
+  background-image: linear-gradient(black, rgb(65, 65, 65));
+}
