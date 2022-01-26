@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/beauty.css' %}" />
+    <link
+      rel="icon"
+      href="{% static '/images/myPic.jpg' %}"
+      type="image/x-icon"
+    />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <i class="fas fa-laptop-code"></i>
+    <title>PJ Port</title>
+  </head>
+  <body>
+    <header class="text-black-900 body-font" id="headerId">
+      <div
+        class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center border-b border-gray-400"
+      >
+        <a class="flex title-font font-medium items-center mb-4 md:mb-0">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            style="color: rgb(40, 197, 34)"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+            />
+          </svg>
+          <a class="ml-3 text-xl hover:cursor-pointer">PJ Port</a>
+        </a>
+        <nav
+          class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center"
+        >
+          <a class="mr-5" href="#overview">About</a>
+          <a class="mr-5" href="#skills">Skills</a>
+          <a class="mr-5" href="#projects">Projects</a>
+          <a class="mr-5" href="#contact">Contact</a>
+        </nav>
+        <button id="navBarBtn" onclick="darkMode()">Dark Side</button>
+      </div>
+    </header>
+
+    <section class="text-gray-600 body-font">
+      <!-- OVERVIEW -->
+      <div
+        class="container mx-auto flex items-center justify-center flex-col"
+        id="overview"
+      >
+        <img
+          class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded"
+          alt="hero"
+          src="{% static '/images/myPic.jpg' %}"
+          style="
+            border-radius: 50%;
+            width: 20%;
+            margin-top: 2vh;
+            border: 1px solid greenyellow;
+          "
+        />
+        <div class="text-center lg:w-2/3 w-full">
+          <p class="mb-8 text-center">
+            नमस्ते, I'm Paritosh Joshi. I'm a student at
+            <a
+              href="https://amrita.edu/"
+              style="color: rgb(32, 170, 66)"
+              target="_blank"
+              >Amrita Vishwa Vidyapeetham</a
+            >, pursuing B.Tech CSE 2nd Year. <br />
+            I like gaming, coding, learning and memes :)
+          </p>
+        </div>
+
+        <!-- SKILLS -->
+        <div class="container px-5 py-20 mx-auto" id="skills">
+          <h1
+            class="sm:text-3xl text-2xl font-medium title-font text-center mb-10"
+          >
+            Skills & Interests
+          </h1>
+          <div class="flex flex-wrap" style="justify-content: center">
+            <div class="p-4 flex">
+              <div
+                class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4 flex-shrink-0"
+              >
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  data-prefix="fas"
+                  data-icon="laptop-code"
+                  class="svg-inline--fa fa-laptop-code fa-w-20"
+                  role="img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 512"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M255.03 261.65c6.25 6.25 16.38 6.25 22.63 0l11.31-11.31c6.25-6.25 6.25-16.38 0-22.63L253.25 192l35.71-35.72c6.25-6.25 6.25-16.38 0-22.63l-11.31-11.31c-6.25-6.25-16.38-6.25-22.63 0l-58.34 58.34c-6.25 6.25-6.25 16.38 0 22.63l58.35 58.34zm96.01-11.3l11.31 11.31c6.25 6.25 16.38 6.25 22.63 0l58.34-58.34c6.25-6.25 6.25-16.38 0-22.63l-58.34-58.34c-6.25-6.25-16.38-6.25-22.63 0l-11.31 11.31c-6.25 6.25-6.25 16.38 0 22.63L386.75 192l-35.71 35.72c-6.25 6.25-6.25 16.38 0 22.63zM624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="flex-grow pl-6">
+                <h2 class="text-lg title-font font-medium mb-2">Coding</h2>
+                <p class="leading-relaxed text-base">
+                  C++, Python, HTML, CSS, JS, React JS, Django
+                </p>
+              </div>
+            </div>
+            <div class="p-4 flex">
+              <div
+                class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4 flex-shrink-0"
+              >
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  data-prefix="fas"
+                  data-icon="language"
+                  class="svg-inline--fa fa-language fa-w-20"
+                  role="img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 512"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M152.1 236.2c-3.5-12.1-7.8-33.2-7.8-33.2h-.5s-4.3 21.1-7.8 33.2l-11.1 37.5H163zM616 96H336v320h280c13.3 0 24-10.7 24-24V120c0-13.3-10.7-24-24-24zm-24 120c0 6.6-5.4 12-12 12h-11.4c-6.9 23.6-21.7 47.4-42.7 69.9 8.4 6.4 17.1 12.5 26.1 18 5.5 3.4 7.3 10.5 4.1 16.2l-7.9 13.9c-3.4 5.9-10.9 7.8-16.7 4.3-12.6-7.8-24.5-16.1-35.4-24.9-10.9 8.7-22.7 17.1-35.4 24.9-5.8 3.5-13.3 1.6-16.7-4.3l-7.9-13.9c-3.2-5.6-1.4-12.8 4.2-16.2 9.3-5.7 18-11.7 26.1-18-7.9-8.4-14.9-17-21-25.7-4-5.7-2.2-13.6 3.7-17.1l6.5-3.9 7.3-4.3c5.4-3.2 12.4-1.7 16 3.4 5 7 10.8 14 17.4 20.9 13.5-14.2 23.8-28.9 30-43.2H412c-6.6 0-12-5.4-12-12v-16c0-6.6 5.4-12 12-12h64v-16c0-6.6 5.4-12 12-12h16c6.6 0 12 5.4 12 12v16h64c6.6 0 12 5.4 12 12zM0 120v272c0 13.3 10.7 24 24 24h280V96H24c-13.3 0-24 10.7-24 24zm58.9 216.1L116.4 167c1.7-4.9 6.2-8.1 11.4-8.1h32.5c5.1 0 9.7 3.3 11.4 8.1l57.5 169.1c2.6 7.8-3.1 15.9-11.4 15.9h-22.9a12 12 0 0 1-11.5-8.6l-9.4-31.9h-60.2l-9.1 31.8c-1.5 5.1-6.2 8.7-11.5 8.7H70.3c-8.2 0-14-8.1-11.4-15.9z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="flex-grow pl-6">
+                <h2 class="text-lg title-font font-medium mb-2">Languages</h2>
+                <p class="leading-relaxed text-base">
+                  Hindi, English, Learning Español & 日本語
+                </p>
+              </div>
+            </div>
+            <div class="p-4 flex">
+              <div
+                class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4 flex-shrink-0"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  />
+                </svg>
+              </div>
+              <div class="flex-grow pl-6">
+                <h2 class="text-lg title-font font-medium mb-2">Interests</h2>
+                <p class="leading-relaxed text-base">Gaming, Movies, Music</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECTS -->
+        <div
+          class="container px-5 mx-auto"
+          id="projects"
+          style="padding-top: 5rem; padding-bottom: 5rem"
+        >
+          <h1
+            class="sm:text-4xl font-medium title-font mb-2"
+            style="text-align: center"
+          >
+            Projects
+          </h1>
+          <div class="flex flex-col text-center w-full mb-20">
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+              Have a look at some of my projects...
+            </p>
+          </div>
+
+          <div class="flex flex-wrap -m-4">
+            <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
+              <div
+                class="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden"
+              >
+                <h2
+                  class="text-3xl pb-4 mb-4 border-b border-gray-400"
+                  style="text-align: center"
+                >
+                  Hand Gesture Volume Control
+                </h2>
+                <iframe
+                  src="https://youtube.com/embed/gc8GOsZY-I0"
+                  style="margin-top: 1em"
+                ></iframe>
+                <a
+                  href="https://github.com/Paritosh-J/hand-gesture-volume-control.git"
+                  target="_blank"
+                >
+                  <button
+                    class="flex items-center text-white bg-green-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-green-600 rounded"
+                    style="margin-bottom: 1em; margin-top: 1em"
+                  >
+                    GitHub Link
+                    <svg
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      class="w-4 h-4 ml-auto"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                  </button>
+                </a>
+              </div>
+            </div>
+            <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
+              <div
+                class="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden"
+              >
+                <h2
+                  class="text-3xl pb-4 mb-4 border-b border-gray-400"
+                  style="text-align: center"
+                >
+                  Brain Tumor Detection
+                </h2>
+                <iframe
+                  src="https://youtube.com/embed/mMFdgcZgHt4"
+                  style="margin-top: 1em"
+                ></iframe>
+                <a
+                  href="https://github.com/Paritosh-J/Neuro-Care.git"
+                  target="_blank"
+                >
+                  <button
+                    class="flex items-center text-white bg-green-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-green-600 rounded"
+                    style="margin-bottom: 1em; margin-top: 1em"
+                  >
+                    GitHub Link
+                    <svg
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      class="w-4 h-4 ml-auto"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                  </button>
+                </a>
+              </div>
+            </div>
+            <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
+              <div
+                class="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden"
+              >
+                <h2
+                  class="text-3xl pb-4 mb-4 border-b border-gray-400"
+                  style="text-align: center"
+                >
+                  Face Detection Using OpenCV
+                </h2>
+                <iframe
+                  src="https://www.youtube.com/embed/l0NFbpxLwXU"
+                  style="margin-top: 1em"
+                ></iframe>
+                <a
+                  href="https://github.com/Paritosh-J/face-detection.git"
+                  target="_blank"
+                >
+                  <button
+                    class="flex items-center text-white bg-green-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-green-600 rounded"
+                    style="margin-bottom: 1em; margin-top: 1em"
+                  >
+                    GitHub Link
+                    <svg
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      class="w-4 h-4 ml-auto"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                  </button>
+                </a>
+              </div>
+            </div>
+            <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
+              <div
+                class="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden"
+              >
+                <h2
+                  class="text-3xl pb-4 mb-4 border-b border-gray-400"
+                  style="text-align: center"
+                >
+                  Angry Flappy Bird Game
+                </h2>
+                <iframe
+                  src="https://youtube.com/embed/ZmqA7sHZIw4"
+                  style="margin-top: 1em"
+                ></iframe>
+                <a
+                  href="https://github.com/Paritosh-J/Angry-Flappy-Bird.git"
+                  target="_blank"
+                >
+                  <button
+                    class="flex items-center text-white bg-green-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-green-600 rounded"
+                    style="margin-bottom: 1em; margin-top: 1em"
+                  >
+                    GitHub Link
+                    <svg
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      class="w-4 h-4 ml-auto"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="body-font" id="contact">
+      <div
+        class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col border-t border-gray-400"
+        style="justify-content: center"
+      >
+        <a
+          class="flex title-font font-medium items-center md:justify-start justify-center"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            style="color: rgb(40, 197, 34)"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+            />
+          </svg>
+          <span class="ml-3 text-xl">PJ Port</span>
+        </a>
+        <p
+          class="text-sm sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4"
+        >
+          © 2022 Paritosh Joshi — paritoshj2001@gmail.com
+        </p>
+        <div class="inline-flex sm:ml-auto" style="margin-left: 1em">
+          <a href="https://github.com/Paritosh-J" target="_blank">
+            <svg
+              fill="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              class="w-5 h-5"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+              />
+            </svg>
+            <a
+              class="ml-3"
+              href="https://linkedin.com/in/paritosh-j"
+              target="_blank"
+            >
+              <svg
+                fill="currentColor"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="0"
+                class="w-5 h-5"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="none"
+                  d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+                ></path>
+                <circle cx="4" cy="4" r="2" stroke="none"></circle>
+              </svg>
+            </a>
+            <a
+              class="ml-3"
+              href="https://www.hackerrank.com/Paritosh_J"
+              target="_blank"
+            >
+              <svg
+                fill="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="w-5 h-5"
+                viewBox="0 0 24 24"
+              >
+                <title>HackerRank icon</title>
+                <path
+                  d="M12 0c1.285 0 9.75 4.886 10.392 6 .645 1.115.645 10.885 0 12S13.287 24 12 24s-9.75-4.885-10.395-6c-.641-1.115-.641-10.885 0-12C2.25 4.886 10.715 0 12 0zm2.295 6.799c-.141 0-.258.115-.258.258v3.875H9.963V6.908h.701c.141 0 .254-.115.254-.258 0-.094-.049-.176-.123-.221L9.223 4.92c-.049-.063-.141-.109-.226-.109-.084 0-.16.045-.207.107L7.11 6.43c-.072.045-.12.126-.12.218 0 .143.113.258.255.258h.704l.008 10.035c0 .145.111.258.254.258h1.492c.142 0 .259-.115.259-.256v-4.004h4.073v4.152h-.699c-.143 0-.256.115-.256.258 0 .092.048.174.119.219l1.579 1.51c.044.061.141.109.225.109.085 0 .159-.045.208-.109l1.679-1.51c.072-.045.12-.127.12-.219 0-.143-.115-.258-.255-.258h-.704l-.007-10.034c0-.145-.114-.26-.255-.26h-1.494v.002z"
+                />
+              </svg>
+            </a>
+          </a>
+          <a class="ml-3" href="https://twitter.com/Paritoshj_" target="_blank">
+            <svg
+              fill="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              class="w-5 h-5"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function darkMode() {
+        var navBar = document.getElementById("headerId");
+        var overview = document.getElementById("overview");
+        var contact = document.getElementById("contact");
+
+        navBar.classList.toggle("navBarDarkMode");
+        overview.classList.toggle("overviewDarkMode");
+        contact.classList.toggle("navBarDarkMode");
+
+        document.getElementById("navBarBtn").style.color = "black";
+        document.getElementById("navBarBtn").style.backgroundColor = "white";
+      }
+    </script>
+  </body>
+</html>
