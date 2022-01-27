@@ -345,6 +345,8 @@
             </div>
           </div>
         </div>
+
+        <button id="toTopBtn" onclick="toTop()">To Top</button>
       </div>
     </section>
 
@@ -453,6 +455,11 @@
     </footer>
 
     <script>
+      var topBtn = document.getElementById("toTopBtn");
+      window.onscroll = function(){
+        scrollFunction()
+      };
+
       function darkMode() {
         var navBar = document.getElementById("headerId");
         var overview = document.getElementById("overview");
@@ -461,9 +468,18 @@
         navBar.classList.toggle("navBarDarkMode");
         overview.classList.toggle("overviewDarkMode");
         contact.classList.toggle("navBarDarkMode");
+      }
 
-        document.getElementById("navBarBtn").style.color = "black";
-        document.getElementById("navBarBtn").style.backgroundColor = "white";
+      function scrollFunction() {
+        if(document.body.scrollTop > 60 || document.documentElement.scrollTop > 60)
+          topBtn.style.display = "block";
+        else
+          topBtn.style.display = "none";
+      }
+
+      function toTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
       }
     </script>
   </body>
